@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F4D279F121C2BB540093D7F7 /* MyPodA.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D279EF21C2BB540093D7F7 /* MyPodA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4D279F821C2BCCB0093D7F7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D279F721C2BCCB0093D7F7 /* Model.swift */; };
+		F4D279FA21C2BF0F0093D7F7 /* ModelLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D279F921C2BF0F0093D7F7 /* ModelLoaderProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4D279EC21C2BB540093D7F7 /* MyPodA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyPodA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D279EF21C2BB540093D7F7 /* MyPodA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPodA.h; sourceTree = "<group>"; };
 		F4D279F021C2BB540093D7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D279F721C2BCCB0093D7F7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F4D279F921C2BF0F0093D7F7 /* ModelLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLoaderProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				F4D279EF21C2BB540093D7F7 /* MyPodA.h */,
+				F4D279F721C2BCCB0093D7F7 /* Model.swift */,
+				F4D279F921C2BF0F0093D7F7 /* ModelLoaderProtocol.swift */,
 				F4D279F021C2BB540093D7F7 /* Info.plist */,
 			);
 			path = MyPodA;
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					F4D279EB21C2BB540093D7F7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D279FA21C2BF0F0093D7F7 /* ModelLoaderProtocol.swift in Sources */,
+				F4D279F821C2BCCB0093D7F7 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +197,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -246,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,6 +270,7 @@
 		F4D279F521C2BB540093D7F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -270,6 +280,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MyPodA/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -278,6 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sergiitatsii.MyPodA;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +298,7 @@
 		F4D279F621C2BB540093D7F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -295,6 +308,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MyPodA/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
